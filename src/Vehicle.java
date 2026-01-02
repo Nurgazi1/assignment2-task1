@@ -1,4 +1,4 @@
-public class Vehicle {
+public abstract class Vehicle {
     private int id;
     private static int idGen;
     private String model;
@@ -45,7 +45,9 @@ public class Vehicle {
     public int getYear() {
         return year;
     }
-
+    public int getId() {
+        return id;
+    }
     public double getBasePrize() {
         return basePrize;
     }
@@ -53,9 +55,7 @@ public class Vehicle {
     public int getAge(int currentYear) {
         return currentYear - year;
     }
-//    public abstract double calculateInsuranceFee() {
-//
-//    }
+    public abstract double calculateInsuranceFee();
 
     @Override
     public String toString() {
